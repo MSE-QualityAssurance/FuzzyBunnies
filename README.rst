@@ -123,7 +123,7 @@ when sharing files between the host and container due to differing uid/gids.
 
    $ docker run \
          --rm \
-         -v $(pwd)/evidence:/workspace/evidence \
+         -v "${PWD}/evidence:/workspace/evidence" \
          --user "$(id -u):$(id -g)" \
          -it cmuqa/fuzzing:exercise-one
 
@@ -147,7 +147,7 @@ indeed convert GIFs to PNGs. You can do so by using one of the images in the
 .. code::
 
    (docker) $ cd gif2png
-   (docker) $ gif2png Test/ducks.gif
+   (docker) $ ./gif2png Test/ducks.gif
 
 To be able to view the resulting PNG on the host machine, you should move the
 output to the shared :code:`graphs` directory:
