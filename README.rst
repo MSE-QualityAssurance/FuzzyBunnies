@@ -58,6 +58,13 @@ and then execute the following from the root of this directory:
    $ docker build -t cmuqa/fuzzing:base .
 
 
+Windows
+.......
+
+Note that there is no need to use the ``--user`` option during ``docker run``
+commands on either Windows or macOS.
+
+
 Risks and Precautions
 .....................
 
